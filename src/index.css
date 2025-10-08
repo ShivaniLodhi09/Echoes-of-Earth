@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Core Earth & Ocean Theme */
+    --background: 221 39% 11%;
+    --foreground: 195 100% 98%;
+
+    --card: 221 39% 14%;
+    --card-foreground: 195 100% 98%;
+
+    --popover: 221 45% 9%;
+    --popover-foreground: 195 100% 98%;
+
+    /* Deep Ocean Blue - Primary */
+    --primary: 221 83% 53%;
+    --primary-foreground: 0 0% 100%;
+    
+    /* Bioluminescent Teal - Secondary */
+    --secondary: 180 75% 45%;
+    --secondary-foreground: 221 39% 11%;
+
+    /* Aurora Purple - Muted */
+    --muted: 221 30% 20%;
+    --muted-foreground: 195 20% 75%;
+
+    /* Earth Green - Accent */
+    --accent: 142 76% 36%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 221 30% 25%;
+    --input: 221 30% 20%;
+    --ring: 221 83% 53%;
+
+    --radius: 0.75rem;
+
+    /* Gradients */
+    --gradient-ocean: linear-gradient(180deg, hsl(221 83% 53%) 0%, hsl(221 39% 11%) 100%);
+    --gradient-atmosphere: linear-gradient(135deg, hsl(221 83% 53%) 0%, hsl(180 75% 45%) 50%, hsl(271 76% 53%) 100%);
+    --gradient-aurora: linear-gradient(90deg, hsl(180 75% 45%) 0%, hsl(271 76% 53%) 50%, hsl(221 83% 53%) 100%);
+    --gradient-earth: linear-gradient(180deg, hsl(142 76% 36%) 0%, hsl(221 83% 53%) 100%);
+    
+    /* Shadows & Effects */
+    --glow-blue: 0 0 40px hsl(221 83% 53% / 0.4);
+    --glow-teal: 0 0 30px hsl(180 75% 45% / 0.3);
+    
+    /* Transitions */
+    --transition-smooth: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
